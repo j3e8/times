@@ -13,7 +13,7 @@
       <div class="text-right number">{{ a }}</div>
       <div class="text-right number">x {{ b }}</div>
       <div class="text-right answer">
-        <input type="text" ng-model="product" ng-keypress="catchNonDigit($event)" ng-keyup="catchEnter($event)">
+        <input type="text" pattern="[0-9]*" ng-model="product" ng-keypress="catchNonDigit($event)" ng-keyup="catchEnter($event)">
       </div>
     </div>
   </body>
