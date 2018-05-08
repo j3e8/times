@@ -1,0 +1,51 @@
+body {
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.0;
+}
+
+body.correct {
+  background-color: #A1DBB2;
+}
+
+body.incorrect {
+  background-color: #F45D4C;
+}
+
+.floating {
+  width: 400px;
+  margin: 20px auto;
+}
+.text-right {
+  text-align: right;
+}
+
+.number {
+  font-size: 15vh;
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+  padding: 25px;
+}
+
+.answer {
+  font-size: 15vh;
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 10px;
+  border-top: 3px solid #000;
+}
+
+input[type=number],
+input[type=text] {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  font-size: 20vh;
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  background-color: rgba(0,0,0,0.1);
+  padding: 25px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: right;
+}
