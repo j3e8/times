@@ -10,11 +10,10 @@ angular.module('app').controller('mainController', function($scope, $timeout) {
   }
 
   $scope.catchEnter = function(e) {
-    if (e.keyCode == 13 && $scope.answerStatus !== true) {
+    if (e.keyCode == 13 && $scope.answerStatus !== true && $scope.product !== null && $scope.product !== '') {
       var userAnswer = $scope.a * $scope.b;
       var correctAnswer = Number($scope.product);
-      console.log(userAnswer, correctAnswer);
-      if (userAnswer == correctAnswer) {
+      if (userAnswer === correctAnswer) {
         $scope.answerStatus = true;
         $timeout(function() {
           reset();
@@ -22,6 +21,10 @@ angular.module('app').controller('mainController', function($scope, $timeout) {
       }
       else {
         $scope.answerStatus = false;
+        $timeout(function() {
+          $scope.product = null;
+          $scope.answerStatus = undefined;
+        }, 1000);
       }
     }
   }
