@@ -2,6 +2,7 @@
 <html lang="en" ng-app="app" ng-controller="mainController">
   <head>
     <title>times tables</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script type="text/javascript" src="times.js"></script>
@@ -11,9 +12,9 @@
   <body ng-class="{ 'correct': answerStatus, 'incorrect': answerStatus === false }">
     <div class="floating">
       <div class="text-right number">{{ a }}</div>
-      <div class="text-right number">x {{ b }}</div>
+      <div class="text-right number">{{ operator }} {{ b }}</div>
       <div class="text-right answer">
-        <input type="text" pattern="[0-9]*" ng-model="product" ng-keypress="catchNonDigit($event)" ng-keyup="catchEnter($event)">
+        <input type="text" pattern="[0-9]*" ng-model="answer" ng-keypress="catchNonDigit($event)" ng-keyup="catchEnter($event)">
       </div>
     </div>
   </body>
